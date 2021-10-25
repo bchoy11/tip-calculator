@@ -20,30 +20,37 @@
   <h1>TTER</h1>
   <div class='outer-container'>
     <div class='input-container'>
-      <div class='Bill'>
+      <div class='Bill section-title-style'>
         Bill
         <input type='number' id='bill-amount'>
       </div>
-      <div class='Tip'>
+      <div class='Tip section-title-style'>
         Select Tip %
-        5%
-        10%
-        15%
-        25%
-        50%
-        Custom
+        <div class='btn-group'>
+          <button>5%</button>
+          <button>10%</button>
+          <button>15%</button>
+          <button>20%</button>
+          <button>50%</button>
+          <button id='btn-custom'>Custom</button>
       </div>
-      <div class='count'>
+        
+      </div>
+      <div class='count section-title-style'>
         Number of People
         <input type='number'>
       </div>
     </div>
     <div class='summary'>
-      Tip Amount
-      / person
-      Total
-      / person
-      Reset
+      <div class='Totals'>
+        <div class='white-font'>Tip Amount</div>
+        / person
+      </div>
+      <div class='Totals'>
+        <div class='white-font'>Total</div>
+        / person
+      </div>
+      <button class='Totals' id='btn-reset'>Reset</button>
     </div>
     
     <div class="attribution">

@@ -9,6 +9,8 @@ body{
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 0;
+    font-weight: 700;
+    color: hsl(184, 14%, 56%);
 }
 
 /* container positioning */
@@ -16,14 +18,15 @@ body{
     background-color:hsl(0, 0%, 100%);
     border: solid red;
     border-radius: 1rem 1rem 0 0;
-    padding:1rem;
-    height:100vh;
+    padding: 1.5rem;
+    height: auto;
 
     /* box-sizing: border-box; */
 }
 
 .input-container{
     border:solid blue;
+
 }
 
 .summary{
@@ -38,9 +41,63 @@ h1{
     color:hsl(183, 100%, 15%);
     letter-spacing: 1rem;
     font-size: 1.3rem;
+    font-weight: 700;
 }
 
 input{
     text-align: right;
     width:100%;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+}
+
+button{
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(189, 41%, 97%);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: .5rem;
+}
+
+.btn-group{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#btn-custom{
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(186, 14%, 43%);
+    text-align: right;
+}
+
+#btn-reset{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+/* summary styles */
+
+.summary{
+    background-color: hsl(183, 100%, 15%);
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.white-font{
+    color: hsl(0, 0%, 100%);
+}
+
+.Totals{
+    margin-top: 1rem;
 }
