@@ -16,7 +16,7 @@ body{
 /* container positioning */
 .outer-container{
     background-color:hsl(0, 0%, 100%);
-    border: solid red;
+    /* border: solid red; */
     border-radius: 1rem 1rem 0 0;
     padding: 1.5rem;
     height: auto;
@@ -24,24 +24,32 @@ body{
     /* box-sizing: border-box; */
 }
 
-.input-container{
+/* .input-container{
     border:solid blue;
-
-}
+} */
 
 .summary{
-    border:solid green;
+    /* border:solid yellow; */
     border-radius: 1rem;
     margin-top: 1rem;
     padding: 1rem;
 }
 
+.title{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 h1{
     text-align: center;
     color:hsl(183, 100%, 15%);
-    letter-spacing: 1rem;
+    letter-spacing: .5rem;
     font-size: 1.3rem;
     font-weight: 700;
+    margin: 0;
+}
+
+.bill-input{
+    position: relative;
 }
 
 input{
@@ -54,6 +62,20 @@ input{
     font-size: 1.5rem;
     color: hsl(183, 100%, 15%);
     font-weight: 700;
+}
+
+#bill-amount{
+    background: url(images/icon-dollar.svg) no-repeat;
+    background-position: left 1rem top 50%;
+}
+
+#people{
+    background: url(images/icon-person.svg) no-repeat;
+    background-position: left 1rem top 50%;
+}
+
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
 }
 
 button{
@@ -80,10 +102,18 @@ button{
     text-align: right;
 }
 
-#btn-reset{
+.btn:focus{
     background-color: hsl(172, 67%, 45%);
     color: hsl(183, 100%, 15%);
 }
+
+#btn-reset{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    margin-top: .5rem;
+}
+
+
 
 /* summary styles */
 
@@ -92,6 +122,7 @@ button{
     display:grid;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 1rem;
+    padding-top: 2.5rem;
 }
 
 .white-font{
@@ -99,5 +130,20 @@ button{
 }
 
 .Totals{
-    margin-top: 1rem;
+    position: relative;
 }
+
+#tip-amount, #total-amount{
+    color: hsl(172, 67%, 45%);
+    text-align: right;
+    position: absolute;
+    right: .5rem;
+    top: 0;
+    margin: 0;
+    font-size: 2rem;
+}
+
+p{
+    margin:0;
+}
+

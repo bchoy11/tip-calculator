@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="index.css">
+<script type="text/javascript" src="index.js"></script>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -16,41 +17,47 @@
   </style>
 </head>
 <body>
-  <h1>SPLI</h1>
-  <h1>TTER</h1>
+  <div class='title'>
+    <h1>SPLI</h1>
+    <h1>TTER</h1>
+  </div>
   <div class='outer-container'>
     <div class='input-container'>
       <div class='Bill section-title-style'>
         Bill
-        <input type='number' id='bill-amount'>
+        <div class='bill-input'>
+          <input type='number' id='bill-amount'>
+        </div>
       </div>
       <div class='Tip section-title-style'>
         Select Tip %
         <div class='btn-group'>
-          <button>5%</button>
-          <button>10%</button>
-          <button>15%</button>
-          <button>20%</button>
-          <button>50%</button>
+          <button class='btn' onclick='calculate(.05)'>5%</button>
+          <button class='btn' onclick='calculate(.10)'>10%</button>
+          <button class='btn' onclick='calculate(.15)'>15%</button>
+          <button class='btn' onclick='calculate(.20)'>20%</button>
+          <button class='btn' onclick='calculate(.50)'>50%</button>
           <button id='btn-custom'>Custom</button>
       </div>
         
       </div>
       <div class='count section-title-style'>
         Number of People
-        <input type='number'>
+        <input type='number' id='people'>
       </div>
     </div>
     <div class='summary'>
       <div class='Totals'>
-        <div class='white-font'>Tip Amount</div>
-        / person
+          <div class='white-font'>Tip Amount</div>
+          <p>/ person</p>
+        <h2 id='tip-amount'></h2>
       </div>
       <div class='Totals'>
         <div class='white-font'>Total</div>
         / person
+        <h2 id='total-amount'></h2>
       </div>
-      <button class='Totals' id='btn-reset'>Reset</button>
+      <button id='btn-reset'>RESET</button>
     </div>
     
     <div class="attribution">
