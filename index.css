@@ -48,6 +48,8 @@ h1{
     margin: 0;
 }
 
+/* input styles */
+
 .bill-input{
     position: relative;
 }
@@ -78,6 +80,8 @@ input::-webkit-inner-spin-button{
     -webkit-appearance: none;
 }
 
+/* buttons */
+
 button{
     background-color: hsl(183, 100%, 15%);
     color: hsl(189, 41%, 97%);
@@ -100,6 +104,7 @@ button{
     background-color: hsl(189, 41%, 97%);
     color: hsl(186, 14%, 43%);
     text-align: right;
+    padding-right: 1.5rem;
 }
 
 .btn:focus{
@@ -112,7 +117,6 @@ button{
     color: hsl(183, 100%, 15%);
     margin-top: .5rem;
 }
-
 
 
 /* summary styles */
