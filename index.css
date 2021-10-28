@@ -50,12 +50,20 @@ input{
     text-align: right;
     width:100%;
     border: none;
+    border-radius: 5px;
     background-color: hsl(189, 41%, 97%);
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 1.5rem;
     color: hsl(183, 100%, 15%);
     font-weight: 700;
+    cursor: pointer;
+}
+
+input:focus{
+    outline: none !important;
+    border: solid hsl(172, 67%, 45%);
+    border-radius: 5px;
 }
 
 #bill-amount{
@@ -82,6 +90,7 @@ button{
     font-size: 1.5rem;
     font-weight: 700;
     padding: .5rem;
+    cursor: pointer;
 }
 
 .btn-group{
@@ -141,6 +150,19 @@ button{
 
 p{
     margin:0;
+}
+
+/* other style */
+.count{
+    position: relative;
+}
+
+#error-message{
+    color:rgba(189, 76, 76, 0.76);
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
 }
 
 @media (min-width: 750px){

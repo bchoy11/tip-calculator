@@ -37,12 +37,15 @@
           <button class='btn' onclick='calculate(.15)'>15%</button>
           <button class='btn' onclick='calculate(.25)'>25%</button>
           <button class='btn' onclick='calculate(.50)'>50%</button>
-          <button id='btn-custom'>Custom</button>
+          <button id='btn-custom' onclick='customtip()'>Custom</button>
       </div>
         
       </div>
       <div class='count section-title-style'>
         Number of People
+        <div id='error-message'>
+          Can't be zero
+        </div>
         <input type='number' id='people'>
       </div>
     </div>
@@ -50,14 +53,14 @@
       <div class='Totals total-tip'>
           <div class='white-font'>Tip Amount</div>
           <p>/ person</p>
-        <h2 id='tip-amount'></h2>
+        <h2 id='tip-amount'>$0.00</h2>
       </div>
       <div class='Totals total-amount'>
         <div class='white-font'>Total</div>
         / person
-        <h2 id='total-amount'></h2>
+        <h2 id='total-amount'>$0.00</h2>
       </div>
-      <button id='btn-reset'>RESET</button>
+      <button id='btn-reset' onclick="reset()">RESET</button>
     </div>
     
     <div class="attribution footer">

@@ -1,7 +1,28 @@
 function calculate(percent){
-    const bill=Number(document.getElementById('bill-amount').value);
     const people=document.getElementById('people').value;
-    const tip=(bill*percent)/people;
-    document.getElementById('tip-amount').innerHTML='$'+Math.floor(tip*100)/100;
-    document.getElementById('total-amount').innerHTML='$'+((bill/people)+tip).toFixed(2);
+    if(people<1){
+        document.getElementById('people').style='outline: solid rgba(189, 76, 76, 0.76);;';
+        document.getElementById('error-message').style='display: block';
+    }
+    else{
+        const bill=Number(document.getElementById('bill-amount').value);
+        const tip=(bill*percent)/people;
+        document.getElementById('tip-amount').innerHTML='$'+Math.floor(tip*100)/100;
+        document.getElementById('total-amount').innerHTML='$'+((bill/people)+tip).toFixed(2);
+        document.getElementById('people').style='outline: none';
+        document.getElementById('error-message').style='display: none';
+    }
+}
+
+function reset(){
+    document.getElementById('tip-amount').innerHTML='$0.00';
+    document.getElementById('total-amount').innerHTML='$0.00';
+    document.getElementById('bill-amount').value='';
+    document.getElementById('people').value='';
+    document.getElementById('people').style='outline: none';
+    document.getElementById('error-message').style='display: none';
+}
+
+function customtip(){
+    document.getElementById('btn-custom').outerHTML;
 }
