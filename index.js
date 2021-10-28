@@ -17,12 +17,14 @@ function calculate(percent){
 function reset(){
     document.getElementById('tip-amount').innerHTML='$0.00';
     document.getElementById('total-amount').innerHTML='$0.00';
-    document.getElementById('bill-amount').value='';
+    document.getElementById('bill-amount').value=''
+    document.getElementById('btn-custom').value='';
     document.getElementById('people').value='';
     document.getElementById('people').style='outline: none';
     document.getElementById('error-message').style='display: none';
 }
 
 function customtip(){
-    document.getElementById('btn-custom').outerHTML;
+    const percent = document.getElementById('btn-custom').value/100;
+    calculate(percent);
 }

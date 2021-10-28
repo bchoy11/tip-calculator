@@ -14,6 +14,7 @@ body{
 }
 
 /* container positioning */
+
 .outer-container{
     background-color:hsl(0, 0%, 100%);
     border-radius: 1rem 1rem 0 0;
@@ -51,7 +52,6 @@ input{
     width:100%;
     border: none;
     border-radius: 5px;
-    background-color: hsl(189, 41%, 97%);
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-size: 1.5rem;
@@ -66,14 +66,20 @@ input:focus{
     border-radius: 5px;
 }
 
+input::placeholder{
+    text-align: center;
+}
+
 #bill-amount{
     background: url(images/icon-dollar.svg) no-repeat;
     background-position: left 1rem top 50%;
+    background-color: hsl(180, 42%, 95%);
 }
 
 #people{
     background: url(images/icon-person.svg) no-repeat;
     background-position: left 1rem top 50%;
+    background-color: hsl(180, 42%, 95%);
 }
 
 input::-webkit-inner-spin-button{
@@ -102,10 +108,8 @@ button{
 }
 
 #btn-custom{
-    background-color: hsl(189, 41%, 97%);
+    background-color: hsl(180, 42%, 95%);
     color: hsl(186, 14%, 43%);
-    text-align: right;
-    padding-right: 1.5rem;
 }
 
 .btn:focus{
@@ -119,6 +123,9 @@ button{
     margin-top: .5rem;
 }
 
+#btn-reset:hover{
+    background-color: hsl(185, 41%, 84%);
+}
 
 /* summary styles */
 
@@ -153,6 +160,7 @@ p{
 }
 
 /* other style */
+
 .count{
     position: relative;
 }
@@ -165,6 +173,13 @@ p{
     display: none;
 }
 
+#btn-custom{
+    margin: 0;
+    padding: 0;
+}
+
+/* styling for desktop view (1440x1024) */
+
 @media (min-width: 750px){
     body{
         margin: 8rem 16rem 10rem 16rem;
@@ -175,9 +190,13 @@ p{
         margin-top: 5.5rem;
         display:flex;
         flex-direction: row;
-        gap: 3rem;
+        gap: 2.5rem;
         border-radius: 1rem;
         padding: 1rem;
+    }
+    
+    .input-container{
+        width: 50%;
     }
 
     .summary{
@@ -191,7 +210,7 @@ p{
     .Tip, .count{
         margin-top: 1.5rem;
     }
-
+    
     .btn-group{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
