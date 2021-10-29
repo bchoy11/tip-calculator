@@ -7,16 +7,16 @@ function calculate(percent){
     else{
         const bill=Number(document.getElementById('bill-amount').value);
         const tip=(bill*percent)/people;
-        document.getElementById('tip-amount').innerHTML='$'+Math.floor(tip*100)/100;
-        document.getElementById('total-amount').innerHTML='$'+((bill/people)+tip).toFixed(2);
+        document.getElementById('tip-amount').textContent='$'+Math.floor(tip*100)/100;
+        document.getElementById('total-amount').textContent='$'+((bill/people)+tip).toFixed(2);
         document.getElementById('people').style='outline: none';
         document.getElementById('error-message').style='display: none';
     }
 }
 
 function reset(){
-    document.getElementById('tip-amount').innerHTML='$0.00';
-    document.getElementById('total-amount').innerHTML='$0.00';
+    document.getElementById('tip-amount').textContent='$0.00';
+    document.getElementById('total-amount').textContent='$0.00';
     document.getElementById('bill-amount').value=''
     document.getElementById('btn-custom').value='';
     document.getElementById('people').value='';
@@ -28,3 +28,6 @@ function customtip(){
     const percent = document.getElementById('btn-custom').value/100;
     calculate(percent);
 }
+
+
+
